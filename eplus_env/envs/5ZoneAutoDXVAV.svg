@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<svg width="250mm" height="200mm" viewBox="0 0   2900    1500"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events">
+<g font-family="Verdana" font-size="8" >
+  <rect x="   200" y="   260" width="   200" height="    20" style = "fill:snow; stroke: Black;"/>     1
+  <text x="   202" y="   273">OutdoorAir:NodeList</text>
+  <rect x="  2300" y="    20" width="   200" height="    20" style = "fill:chartreuse; stroke: Black;"/>     5
+  <text x="  2302" y="    33">SPACE1-1</text>
+  <rect x="  1400" y="    20" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>    10
+  <text x="  1402" y="    33">ZONE SUPPLY AIR SPLITTER 1</text>
+  <rect x="  1700" y="    20" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>    11
+  <text x="  1702" y="    33">SPACE1-1 VAV REHEAT</text>
+  <rect x="  1700" y="    60" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>    12
+  <text x="  1702" y="    73">SPACE2-1 VAV REHEAT</text>
+  <rect x="  1700" y="   100" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>    13
+  <text x="  1702" y="   113">SPACE3-1 VAV REHEAT</text>
+  <rect x="  1700" y="   140" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>    14
+  <text x="  1702" y="   153">SPACE4-1 VAV REHEAT</text>
+  <rect x="  1700" y="   180" width="   200" height="    20" style = "fill:wheat; stroke: Black;"/>    15
+  <text x="  1702" y="   193">SPACE5-1 VAV REHEAT</text>
+  <rect x="  2000" y="    20" width="   200" height="    20" style = "fill:salmon; stroke: Black;"/>    16
+  <text x="  2002" y="    33">SPACE1-1 ZONE COIL</text>
+  <rect x="  2000" y="    60" width="   200" height="    20" style = "fill:salmon; stroke: Black;"/>    17
+  <text x="  2002" y="    73">SPACE2-1 ZONE COIL</text>
+  <rect x="  2000" y="   100" width="   200" height="    20" style = "fill:salmon; stroke: Black;"/>    18
+  <text x="  2002" y="   113">SPACE3-1 ZONE COIL</text>
+  <rect x="  2000" y="   140" width="   200" height="    20" style = "fill:salmon; stroke: Black;"/>    19
+  <text x="  2002" y="   153">SPACE4-1 ZONE COIL</text>
+  <rect x="  2000" y="   180" width="   200" height="    20" style = "fill:salmon; stroke: Black;"/>    20
+  <text x="  2002" y="   193">SPACE5-1 ZONE COIL</text>
+  <rect x="   800" y="    20" width="   200" height="    20" style = "fill:salmon; stroke: Black;"/>    21
+  <text x="   802" y="    33">MAIN HEATING COIL 1</text>
+  <rect x="  2600" y="   180" width="   200" height="    20" style = "fill:lightgreen; stroke: Black;"/>    22
+  <text x="  2602" y="   193">RETURN-PLENUM-1</text>
+  <rect x="   200" y="    20" width="   200" height="    20" style = "fill:lawngreen; stroke: Black;"/>    23
+  <text x="   202" y="    33">OA MIXING BOX 1</text>
+  <rect x="  1100" y="    20" width="   200" height="    20" style = "fill:silver; stroke: Black;"/>    24
+  <text x="  1102" y="    33">SUPPLY FAN 1</text>
+  <rect x="   500" y="    20" width="   200" height="    20" style = "fill:skyblue; stroke: Black;"/>    26
+  <text x="   502" y="    33">MAIN COOLING COIL 1</text>
+  <rect x="  2300" y="    60" width="   200" height="    20" style = "fill:chartreuse; stroke: Black;"/>    27
+  <text x="  2302" y="    73">SPACE2-1</text>
+  <rect x="  2300" y="   100" width="   200" height="    20" style = "fill:chartreuse; stroke: Black;"/>    28
+  <text x="  2302" y="   113">SPACE3-1</text>
+  <rect x="  2300" y="   140" width="   200" height="    20" style = "fill:chartreuse; stroke: Black;"/>    29
+  <text x="  2302" y="   153">SPACE4-1</text>
+  <rect x="  2300" y="   180" width="   200" height="    20" style = "fill:chartreuse; stroke: Black;"/>    30
+  <text x="  2302" y="   193">SPACE5-1</text>
+  <line x1="  1600" y1="    30" x2="  1700" y2="    30" style = "stroke: Black;"/>
+  <line x1="  1600" y1="    30" x2="  1700" y2="    70" style = "stroke: Black;"/>
+  <line x1="  1600" y1="    30" x2="  1700" y2="   110" style = "stroke: Black;"/>
+  <line x1="  1600" y1="    30" x2="  1700" y2="   150" style = "stroke: Black;"/>
+  <line x1="  1600" y1="    30" x2="  1700" y2="   190" style = "stroke: Black;"/>
+  <line x1="  1900" y1="    30" x2="  2000" y2="    30" style = "stroke: Black;"/>
+  <line x1="  1900" y1="    70" x2="  2000" y2="    70" style = "stroke: Black;"/>
+  <line x1="  1900" y1="   110" x2="  2000" y2="   110" style = "stroke: Black;"/>
+  <line x1="  1900" y1="   150" x2="  2000" y2="   150" style = "stroke: Black;"/>
+  <line x1="  1900" y1="   190" x2="  2000" y2="   190" style = "stroke: Black;"/>
+  <line x1="  2200" y1="    30" x2="  2300" y2="    30" style = "stroke: Black;"/>
+  <line x1="  2200" y1="    70" x2="  2300" y2="    70" style = "stroke: Black;"/>
+  <line x1="  2200" y1="   110" x2="  2300" y2="   110" style = "stroke: Black;"/>
+  <line x1="  2200" y1="   150" x2="  2300" y2="   150" style = "stroke: Black;"/>
+  <line x1="  2200" y1="   190" x2="  2300" y2="   190" style = "stroke: Black;"/>
+  <line x1="  1000" y1="    30" x2="  1100" y2="    30" style = "stroke: Black;"/>
+  <line x1="   400" y1="    30" x2="   500" y2="    30" style = "stroke: Black;"/>
+  <line x1="  1300" y1="    30" x2="  1400" y2="    30" style = "stroke: Black;"/>
+  <line x1="   700" y1="    30" x2="   800" y2="    30" style = "stroke: Black;"/>
+  <line x1="  2500" y1="    30" x2="  2600" y2="   190" style = "stroke: Black;"/>
+  <line x1="  2500" y1="    70" x2="  2600" y2="   190" style = "stroke: Black;"/>
+  <line x1="  2500" y1="   110" x2="  2600" y2="   190" style = "stroke: Black;"/>
+  <line x1="  2500" y1="   150" x2="  2600" y2="   190" style = "stroke: Black;"/>
+  <line x1="  2500" y1="   190" x2="  2600" y2="   190" style = "stroke: Black;"/>
+  <line x1="   200" y1="    30" x2="   175" y2="    30" style = "stroke: Black;"/>
+  <line x1="   175" y1="    30" x2="   175" y2="     0" style = "stroke: Black;"/>
+  <line x1="   175" y1="     0" x2="  2825" y2="     0" style = "stroke: Black;"/>
+  <line x1="  2825" y1="     0" x2="  2825" y2="   190" style = "stroke: Black;"/>
+  <line x1="  2825" y1="   190" x2="  2800" y2="   190" style = "stroke: Black;"/>
+  <text x="   200" y="   320">Unused Non-Parent Objects:</text>
+  <text x="   220" y="   340">OutdoorAir:Node</text>
+  <text x="   220" y="   360">SUPPLY AIR TEMP MANAGER 1</text>
+  <text x="   220" y="   380">MIXED AIR AND COIL EXIT TEMP MANAGER 1</text>
+  <text x="   220" y="   400">OA CONTROLLER 1</text>
+  <text x="   200" y="   440">
+The following are not supported: objects related to controls, AirTerminal:SingleDuct:Uncontrolled, or ZoneHVAC:IdealLoadsAirSystem</text>
+</g>
+</svg>

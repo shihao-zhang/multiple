@@ -1,0 +1,47 @@
+Program Version,EnergyPlus, Version 8.6.0-198c6a3cff, YMD=2018.11.01 22:52
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,6,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,3,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,SPACE1-1,Zone People Occupant Count [] !TimeStep
+7,1,SPACE2-1,Zone People Occupant Count [] !TimeStep
+8,1,SPACE3-1,Zone People Occupant Count [] !TimeStep
+9,1,SPACE4-1,Zone People Occupant Count [] !TimeStep
+10,1,SPACE5-1,Zone People Occupant Count [] !TimeStep
+231,1,PLENUM-1,Zone Mean Radiant Temperature [C] !TimeStep
+232,1,SPACE1-1,Zone Mean Radiant Temperature [C] !TimeStep
+233,1,SPACE2-1,Zone Mean Radiant Temperature [C] !TimeStep
+234,1,SPACE3-1,Zone Mean Radiant Temperature [C] !TimeStep
+235,1,SPACE4-1,Zone Mean Radiant Temperature [C] !TimeStep
+236,1,SPACE5-1,Zone Mean Radiant Temperature [C] !TimeStep
+309,1,PLENUM-1,Zone Air Temperature [C] !TimeStep
+310,1,PLENUM-1,Zone Air Relative Humidity [%] !TimeStep
+311,1,PLENUM-1,Zone Thermostat Heating Setpoint Temperature [C] !TimeStep
+312,1,PLENUM-1,Zone Thermostat Cooling Setpoint Temperature [C] !TimeStep
+345,1,SPACE1-1,Zone Air Temperature [C] !TimeStep
+346,1,SPACE1-1,Zone Air Relative Humidity [%] !TimeStep
+347,1,SPACE1-1,Zone Thermostat Heating Setpoint Temperature [C] !TimeStep
+348,1,SPACE1-1,Zone Thermostat Cooling Setpoint Temperature [C] !TimeStep
+381,1,SPACE2-1,Zone Air Temperature [C] !TimeStep
+382,1,SPACE2-1,Zone Air Relative Humidity [%] !TimeStep
+383,1,SPACE2-1,Zone Thermostat Heating Setpoint Temperature [C] !TimeStep
+384,1,SPACE2-1,Zone Thermostat Cooling Setpoint Temperature [C] !TimeStep
+417,1,SPACE3-1,Zone Air Temperature [C] !TimeStep
+418,1,SPACE3-1,Zone Air Relative Humidity [%] !TimeStep
+419,1,SPACE3-1,Zone Thermostat Heating Setpoint Temperature [C] !TimeStep
+420,1,SPACE3-1,Zone Thermostat Cooling Setpoint Temperature [C] !TimeStep
+453,1,SPACE4-1,Zone Air Temperature [C] !TimeStep
+454,1,SPACE4-1,Zone Air Relative Humidity [%] !TimeStep
+455,1,SPACE4-1,Zone Thermostat Heating Setpoint Temperature [C] !TimeStep
+456,1,SPACE4-1,Zone Thermostat Cooling Setpoint Temperature [C] !TimeStep
+489,1,SPACE5-1,Zone Air Temperature [C] !TimeStep
+490,1,SPACE5-1,Zone Air Relative Humidity [%] !TimeStep
+491,1,SPACE5-1,Zone Thermostat Heating Setpoint Temperature [C] !TimeStep
+492,1,SPACE5-1,Zone Thermostat Cooling Setpoint Temperature [C] !TimeStep
+586,1,Whole Building,Facility Total HVAC Electric Demand Power [W] !TimeStep
+587,1,SPACE1-1 PEOPLE 1,Zone Thermal Comfort Fanger Model PMV [] !TimeStep
+588,1,SPACE2-1 PEOPLE 1,Zone Thermal Comfort Fanger Model PMV [] !TimeStep
+589,1,SPACE3-1 PEOPLE 1,Zone Thermal Comfort Fanger Model PMV [] !TimeStep
+590,1,SPACE4-1 PEOPLE 1,Zone Thermal Comfort Fanger Model PMV [] !TimeStep
+591,1,SPACE5-1 PEOPLE 1,Zone Thermal Comfort Fanger Model PMV [] !TimeStep
