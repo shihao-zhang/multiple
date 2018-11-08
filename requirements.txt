@@ -1,0 +1,11 @@
+gym
+matplotlib
+pandas
+scipy
+scikit-learn
+numpy
+tensorflow
+keras
+ipdb
+numba
+-e .
