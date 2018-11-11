@@ -308,8 +308,6 @@ class feedback():
         r = []
 
         r.append(pmv)
-        if pmv < 0.5 and pmv > -0.5:
-            ppd = 0
         r.append(ppd)
        
 

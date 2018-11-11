@@ -55,7 +55,7 @@ def get_output_folder(parent_dir, env_name):
 def main():  
     parser = argparse.ArgumentParser(description='Run Reinforcment Learning at an Office in Tsinghua University')
     parser.add_argument('--env', default='multiple_control-v0', help='Environment name')
-    parser.add_argument('-o', '--output', default='multiple_QN_Eplus_OnedaySigmoid', help='Directory to save data to')
+    parser.add_argument('-o', '--output', default='multiple_QN_Eplus_OneDay', help='Directory to save data to')
     parser.add_argument('--num', default=500, help='Number of Episodes')
     parser.add_argument('--memory', default=2000, help='max size of replay memory')
     parser.add_argument('--gamma', default=0.95, help='Discount Factor')

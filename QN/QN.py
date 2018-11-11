@@ -12,7 +12,7 @@ from .simulator import skinTemperature
 import sys
 import csv
 
-MAX_STEP = 200
+MAX_STEP = 1000
 UPDATE_STEP = 30000
 
 
@@ -20,7 +20,7 @@ class QNAgent:
     def __init__(self, state_size, action_size,discount_factor, learning_rate):
         self.state_size = state_size
         self.action_size = action_size
-        self.memory = deque(maxlen=2000)
+        self.memory = deque(maxlen=3000)
         self.gamma = discount_factor    # discount rate
         self.learning_rate = learning_rate
         self.model = self._build_model()
@@ -37,9 +37,9 @@ class QNAgent:
     def _build_model(self):
         # Neural Net for Deep-Q learning Model
         model = Sequential()
-        model.add(Dense(24, input_dim=self.state_size, activation='sigmoid', kernel_initializer=initializers.RandomUniform(minval=-0.05, maxval=0)))
-        model.add(Dense(24, activation='sigmoid', kernel_initializer=initializers.RandomUniform(minval=-0.05, maxval=0)))
-        model.add(Dense(self.action_size, activation='linear', kernel_initializer=initializers.RandomUniform(minval=-0.05, maxval=0)))
+        model.add(Dense(24, input_dim=self.state_size, activation='relu')) #, kernel_initializer=initializers.RandomUniform(minval=-0.05, maxval=0))
+        model.add(Dense(24, activation='relu'))
+        model.add(Dense(self.action_size, activation='linear'))
         model.compile(loss=self._huber_loss,
                       optimizer=Adam(lr=self.learning_rate))
         return model
@@ -82,7 +82,7 @@ class QNAgent:
         self.model.save_weights(name)
 
 
-def act(env, agents, states, epsilon):
+def act(env, agents, states, epsilon, i_episode):
         if np.random.rand() <= epsilon:
             random_action = random.randrange(env.nA)
             return random_action, [random_action, random_action, random_action]
@@ -94,9 +94,12 @@ def act(env, agents, states, epsilon):
             action_value = agent.predict(state)[0]
             act_values.append(action_value)
             best_action.append(np.argmax(action_value))
+            # if(i_episode%100 == 0):
+            #     print("agent" + str(i))
+            #     print(action_value) 
             i = i + 1
         act_values = np.array(act_values)
-       # print(act_values)
+        # get averaged Q - value
         act_values = np.average(act_values, axis=0)
         return np.argmax(act_values), best_action   # returns action
 
@@ -134,10 +137,9 @@ def q_learning(env, agents, num_episodes, batch_size, epsilon, epsilon_min, epsi
    
        
         for t in range(MAX_STEP):
-            for i in range(env.nO):
         
-                ## Decide action
-                action = act(env, agents, states, epsilon)
+            ## Decide action
+            action = act(env, agents, states, epsilon, i_episode)
 
             ## Advance the game to the next frame based on the action
             next_states, rewards, done, _ = env.step(action)
@@ -153,9 +155,9 @@ def q_learning(env, agents, num_episodes, batch_size, epsilon, epsilon_min, epsi
             for j in range(env.nO):
                 states[j] = np.reshape(states[j], [1, env.nS])
                 next_states[j] = np.reshape(next_states[j], [1, env.nS])
-                agents[j].remember(states[j], action[0], rewards[j], next_states[j], done)    
+                agents[j].remember(states[j], action[0], rewards[j], next_states[j], done)   
                 if len(agents[j].memory) > batch_size:
-                        agents[j].replay(batch_size)  
+                    agents[j].replay(batch_size)  
 
             ## make next_state the new current state for the next frame.
             states = next_states
@@ -168,7 +170,7 @@ def q_learning(env, agents, num_episodes, batch_size, epsilon, epsilon_min, epsi
                  mean_score))
         #if(i_episode > 200):
         write_csv(folder, i_episode, stats.episode_lengths[i_episode], mean_score)
-        if(i_episode%50 == 0):
+        if(i_episode%100 == 0):
             for j in range(env.nO):
                 agents[j].save(folder + "_qn_O" + str(j) + "_" + str(i_episode) + ".h5")   
     for j in range(env.nO):
@@ -188,7 +190,7 @@ def write_csv(folder, episode, step_num, average_score):
 def evaluation(env, agent, folder):
     model = agent.load(folder + "_qn-final_O2.h5")
     for air in np.arange(18,30,0.5):
-        state = skinTemperature().comfPierceSET(air, air-1, 35, 0.7) 
+        state = skinTemperature().comfPierceSET(air, air-1, 35, 1.0) 
         print(state)
         state = env._process_state_DDQN(state)
         #env._print()

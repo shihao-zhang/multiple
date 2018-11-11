@@ -17,7 +17,7 @@ Tskin_max = 35.72
 Tskin_min = 29.9
 
 
-CLO = [1.0, 0.7, 0.4]
+CLO = [0.4, 0.7, 1.0]
 class simulationEnv(gym.Env):
 
 	def __init__(self):
@@ -73,6 +73,7 @@ class simulationEnv(gym.Env):
 		pre_Rh = self.cur_Rh
 
 		self.cur_setpoint = self.cur_setpoint + incr_Ta
+		overflow = False
 		if self.cur_setpoint > Ta_max:
 			self.cur_setpoint = Ta_max
 		elif self.cur_setpoint < Ta_min:
@@ -89,7 +90,6 @@ class simulationEnv(gym.Env):
 			cursimTime, ob, self.is_terminal = self.Eplusenv.step([21,40])
 
 
-	
 		self.cur_Ta = ob[0]
 		self.cur_Rh = ob[1]
 		self.cur_MRT = ob[2]
@@ -100,9 +100,9 @@ class simulationEnv(gym.Env):
 			cur_Skin = skinTemperature().comfPierceSET(self.cur_Ta, self.cur_MRT, self.cur_Rh, CLO[i]) 
 
 			self.cur_Skin.append(cur_Skin)
-			if self.cur_setpoint > Ta_max:
+			if self.actions[i] > Ta_max:
 				self.reward.append(-100)
-			elif self.cur_setpoint < Ta_min:
+			elif self.actions[i] < Ta_min:
 				self.reward.append(-100)
 			else:
 				# get converted reward after action from PMV model
@@ -134,16 +134,16 @@ class simulationEnv(gym.Env):
 
 
 	def _reset(self):
-		self.cur_setpoint = np.random.choice(range(Ta_min, Ta_max+1))
+		self.cur_setpoint = 21
 
 		cursimTime, ob, self.is_terminal = self.Eplusenv.reset()
 			
 
-		cursimTime, ob, self.is_terminal = self.Eplusenv.step([21,40])
+		cursimTime, ob, self.is_terminal = self.Eplusenv.step([self.cur_setpoint,40])
 		while ob[6] != 3:
 			if self.is_terminal == True:
 				break
-			cursimTime, ob, self.is_terminal = self.Eplusenv.step([21,40])
+			cursimTime, ob, self.is_terminal = self.Eplusenv.step([self.cur_setpoint,40])
 	
 	
 		self.cur_Ta = ob[0]
